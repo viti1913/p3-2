@@ -1,3 +1,5 @@
+// const: contante que guarda uma lista de objetos (perguntas, alternativas...)
+// dentro dos [] cada {} é um objeto
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
@@ -24,7 +26,15 @@ let perguntaAtual; //variável que vai receber o texto
 function mostraPergunta(){ //função que faz aparecer a pergunta
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
 }
-mostraPergunta();
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativas){
+        const botaoAlternativas = document.createElement("button";)
+        botaoAlternativas.textContent = alternativa;
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
+}
+mostraPergunta(); 
 
 //const caixaPerguntas = document.querySelector(".caixa-perguntas");
