@@ -28,6 +28,7 @@ function mostraPergunta(){ //função que faz aparecer a pergunta
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
 }
+mostraPergunta();
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button";)
@@ -35,6 +36,7 @@ function mostraAlternativas(){
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
-mostraPergunta(); 
+mostraAlternativas();
+ 
 
 //const caixaPerguntas = document.querySelector(".caixa-perguntas");
