@@ -1,20 +1,21 @@
-// const: constante que guarda uma lista de objetos (perguntas, alternativas...)
+// Para começar a escrever, precisamos trazer os elementos que criamos no HTML para o JavaScript. 
+// Para fazer isso, utilizamos uma constante (const), porque este valor não vai mudar mais.
 // dentro dos [], cada {} é um objeto
-const caixaPrincipal = document.querySelector(".caixa-principal"); //seleciona a classe caixa-principal do HTML
-const caixaPerguntas = document.querySelector(".caixa-perguntas"); //seleciona a classe caixa-perguntas do HTML
-const caixaAlternativas = document.querySelector(".caixa-alternativas"); //seleciona a classe caixa-alternativas do HTML
-const caixaResultado = document.querySelector(".caixa-resultado"); //seleciona a classe caixa-resultado do HTML
-const textoResultado = document.querySelector(".texto-resultado"); //seleciona a classe texto-resultado do HTML
+const caixaPrincipal = document.querySelector(".caixa-principal"); //constante caixa-principal do HTML
+const caixaPerguntas = document.querySelector(".caixa-perguntas"); //constante caixa-perguntas do HTML
+const caixaAlternativas = document.querySelector(".caixa-alternativas"); //constante caixa-alternativas do HTML
+const caixaResultado = document.querySelector(".caixa-resultado"); //constante caixa-resultado do HTML
+const textoResultado = document.querySelector(".texto-resultado"); //constante texto-resultado do HTML
 
 const perguntas = [ //abre uma lista de perguntas
     { //abre objeto de pergunta
         enunciado: "Pergunta 1",
         alternativas: [
-        {
+        { //alternativa 1
             texto: "Sei que sei que lá",
             afirmacao: "Afirmação"
         },
-        {
+        { //alternativa 2
             texto: "Ah que não sei que sei que",
             afirmacao: "Afirmação",
         },
