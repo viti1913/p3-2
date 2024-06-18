@@ -68,4 +68,4 @@ function mostraAlternativas(){
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
-mostraAlternativas();
+mostraPergunta();
