@@ -27,7 +27,6 @@ let perguntaAtual; //variável que vai receber o texto
 function mostraPergunta(){ //função que faz aparecer a pergunta
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    mostraAlternativas();
 }
 mostraPergunta();
 function mostraAlternativas(){
