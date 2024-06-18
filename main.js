@@ -13,11 +13,11 @@ const perguntas = [ //abre uma lista de perguntas
     },
     {
         enunciado: "Pergunta 2",
-        alternativas: ["Alternativa 1", "Alternativa 2"]
+        alternativas: ["Alternativa 3", "Alternativa 4"]
     }, 
     {
         enunciado: "Pergunta 3",
-        alternativas: ["Alternativa 1", "Alternativa 2"]
+        alternativas: ["Alternativa 5", "Alternativa 6"]
     } //fecha objeto de pergunta
 ]; //fecha lista de pergunta
 
