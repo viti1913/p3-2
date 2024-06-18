@@ -15,7 +15,7 @@ const perguntas = [ //abre uma lista de perguntas
             afirmacao: "Afirmação"
         },
         {
-            texto: "Ah que não sei que sei que"
+            texto: "Ah que não sei que sei que",
             afirmacao: "Afirmação",
         },
     ]
