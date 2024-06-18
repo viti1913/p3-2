@@ -54,8 +54,9 @@ let perguntaAtual; //variável que vai receber o texto
 function mostraPergunta(){ //função que faz aparecer a pergunta
     perguntaAtual = perguntas[atual]; //declara a variável
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
 }
-mostraPergunta();
+
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
