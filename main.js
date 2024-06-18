@@ -9,7 +9,16 @@ const textoResultado = document.querySelector(".texto-resultado");
 const perguntas = [ //abre uma lista de perguntas
     { //abre objeto de pergunta
         enunciado: "Pergunta 1",
-        alternativas: ["Alternativa 1", "Alternativa 2"]
+        alternativas: [
+        {
+            texto: "Sei que sei que lá",
+            afirmacao: "Afirmação"
+        },
+        {
+            texto: "Ah que não sei que sei que"
+            afirmacao: "Afirmação",
+        },
+    ]
     },
     {
         enunciado: "Pergunta 2",
