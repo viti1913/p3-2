@@ -63,7 +63,7 @@ function mostraAlternativas(){
         botaoAlternativas.addEventListener("click", function(){
             atuall++;
             mostraPergunta();
-        })
+        });
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
