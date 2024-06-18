@@ -41,7 +41,7 @@ const perguntas = [ //abre uma lista de perguntas
             afirmacao: "Afirmação"
         },
         {
-            texto: "",
+            texto: "Endauldi agrummgit",
             afirmacao: "Afirmação",
         },
     ]
