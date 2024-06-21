@@ -1,72 +1,116 @@
 // Para começar a escrever, precisamos trazer os elementos que criamos no HTML para o JavaScript. 
 // Para fazer isso, utilizamos uma constante (const), porque este valor não vai mudar mais.
-// dentro dos [], cada {} é um objeto
+
 const caixaPrincipal = document.querySelector(".caixa-principal"); //constante caixa-principal do HTML
 const caixaPerguntas = document.querySelector(".caixa-perguntas"); //constante caixa-perguntas do HTML
 const caixaAlternativas = document.querySelector(".caixa-alternativas"); //constante caixa-alternativas do HTML
 const caixaResultado = document.querySelector(".caixa-resultado"); //constante caixa-resultado do HTML
 const textoResultado = document.querySelector(".texto-resultado"); //constante texto-resultado do HTML
 
-const perguntas = [ //abre uma lista de perguntas
-    { //abre objeto de pergunta
+// dentro dos [], cada {} é um objeto
+
+const perguntas = [
+    {
         enunciado: "Pergunta 1",
         alternativas: [
-        { //alternativa 1
-            texto: "Sei que sei que lá",
-            afirmacao: "Afirmação"
-        },
-        { //alternativa 2
-            texto: "Ah que não sei que sei que",
-            afirmacao: "Afirmação",
-        },
-    ]
-    }, //fecha objeto de pergunta
-    { //abre objeto de pergunta
+            {
+                texto: "Texto 1.1",
+                afirmacao: "Afirmação 1"
+            },
+            {
+                texto: "Texto 1.2",
+                afirmacao: "Afirmação 2"
+            }
+        ]
+    },
+    {
         enunciado: "Pergunta 2",
         alternativas: [
-        {
-            texto: "Que não sei que sei que lá",
-            afirmacao: "Afirmação"
-        },
-        {
-            texto: "Sei lá sei que",
-            afirmacao: "Afirmação",
-        },
-    ]
-    }, //fecha objeto de pergunta
-    { //abre objeto de pergunta
+            {
+                texto: "Texto 2.1",
+                afirmacao: "Afirmação 1"
+            },
+            {
+                texto: "Texto 2.2",
+                afirmacao: "Afirmação 2"
+            }
+        ]
+    },
+    {
         enunciado: "Pergunta 3",
         alternativas: [
-        {
-            texto: "Bla bla bla bla",
-            afirmacao: "Afirmação"
-        },
-        {
-            texto: "Endauldi agrummgit",
-            afirmacao: "Afirmação",
-        },
-    ]
-    } //fecha objeto de pergunta
-]; //fecha lista de pergunta
+            {
+                texto: "Texto 3.1",
+                afirmacao: "Afirmação 1"
+            },
+            {
+                texto: "Texto 3.2",
+                afirmacao: "Afirmação 2"
+            }
+        ]
+    },
+    {
+        enunciado: "Pergunta 4",
+        alternativas: [
+            {
+                texto: "Texto 4.1",
+                afirmacao: "Afirmação 1"
+            },
+            {
+                texto: "Texto 4.2",
+                afirmacao: "Afirmação 2"
+            }
+        ]
+    },
+    {
+        enunciado: "Pergunta 5",
+        alternativas: [
+            {
+                texto: "Texto 5.1",
+                afirmacao: "Afirmação 1"
+            },
+            {
+                texto: "Texto 5.2",
+                afirmacao: "Afirmação 2"
+            }
+        ]
+    },
+];
 
 let atual = 0; //variável marcador de posição; começa pela pergunta 1
 let perguntaAtual; //variável que vai receber o texto
+let historiaFinal = ""; //variável que vai receber a historia
 
-function mostraPergunta(){ //função que faz aparecer a pergunta
-    perguntaAtual = perguntas[atual]; //declara a variável
+
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
 
 function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas){
+    for(const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", function(){
-            atual++;
-            mostraPergunta();
-        })
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
-mostraPergunta();
+
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
+}
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2049...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
