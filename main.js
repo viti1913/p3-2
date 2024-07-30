@@ -72,12 +72,12 @@ const perguntas = [
     },
 ];
 
-//declaração de variáveis
+//Declaração de variáveis
 let atual = 0; //variável que mantem o inice da pergunta atual no array 'perguntas'
 let perguntaAtual; // variável que armazena a pergunta atual
 let historiaFinal = ""; //String que acumula as afirmações selecionadas pelo usuário, formando uma narrativa final.
 
-//essa função tem como objetivo exibir a pergunta atual ou o resultado final se todas as perguntas tiverem sido respondidas.
+//Essa função tem como objetivo exibir a pergunta atual ou o resultado final se todas as perguntas tiverem sido respondidas.
 function mostraPergunta() {
     if (atual >= perguntas.length) { //Verifica se o índice atual excede o número de perguntas disponíveis. Se sim, chama mostraResultado e retorna, encerrando a função.
         mostraResultado();
@@ -89,7 +89,7 @@ function mostraPergunta() {
     mostraAlternativas(); //Chama a função mostraAlternativas para exibir as alternativas da pergunta atual.
 }
 
-//essa função tem como cobjetivo exibir as alternativas da pergunta atual como botões e definir a ação ao clicar neles.
+//Essa função tem como cobjetivo exibir as alternativas da pergunta atual como botões e definir a ação ao clicar neles.
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas) { // Itera sobre cada alternativa da pergunta atual.
         const botaoAlternativas = document.createElement("button"); //Cria um novo elemento de botão para cada alternativa.
@@ -99,7 +99,7 @@ function mostraAlternativas(){
     }
 }
 
-//essa função tem como objetivo processar a resposta selecionada, atualizar a narrativa final e avançar para a próxima pergunta.
+//Essa função tem como objetivo processar a resposta selecionada, atualizar a narrativa final e avançar para a próxima pergunta.
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao; //Obtém a afirmação associada à alternativa selecionada.
     historiaFinal += afirmacoes + " "; //Adiciona a afirmação à historiaFinal.
