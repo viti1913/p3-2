@@ -6,24 +6,24 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Pergunta 1",
+        enunciado: "você costuma mentir?",
         alternativas: [
             {
-                texto: "Texto 1.1",
-                afirmacao: "Afirmação 1.1"
+                texto: "com frequencia",
+                afirmacao: "gay afirmado"
             },
             {
-                texto: "Texto 1.2",
-                afirmacao: "Afirmação 1.2"
+                texto: "nunca minto",
+                afirmacao: "vc é gay pois vc mentiu"
             }
         ]
     },
     {
-        enunciado: "Pergunta 2",
+        enunciado: "sente atrações por pessoas do mesmo gênero?",
         alternativas: [
             {
-                texto: "Texto 2.1",
-                afirmacao: "Afirmação 2.1"
+                texto: "claramente",
+                afirmacao: "não esperava menos"
             },
             {
                 texto: "Texto 2.2",
