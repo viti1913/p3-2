@@ -26,47 +26,47 @@ const perguntas = [
                 afirmacao: "não esperava menos"
             },
             {
-                texto: "Texto 2.2",
-                afirmacao: "Afirmação 2.2"
+                texto: "obviamente não",
+                afirmacao: "gay sempre mente"
             }
         ]
     },
     {
-        enunciado: "Pergunta 3",
+        enunciado: "você é amostradinho?",
         alternativas: [
             {
-                texto: "Texto 3.1",
-                afirmacao: "Afirmação 3.1"
+                texto: "obviamente",
+                afirmacao: "como vc sabe oq isso significa?"
             },
             {
-                texto: "Texto 3.2",
-                afirmacao: "Afirmação 3.2"
+                texto: "nem sei oq é só uso",
+                afirmacao: "te entendo"
             }
         ]
     },
     {
-        enunciado: "Pergunta 4",
+        enunciado: "vc precisa de tratamentos psicologicos?",
         alternativas: [
             {
-                texto: "Texto 4.1",
-                afirmacao: "Afirmação 4.1"
+                texto: "faz tempo",
+                afirmacao: "todos precisamos"
             },
             {
-                texto: "Texto 4.2",
-                afirmacao: "Afirmação 4.2"
+                texto: "sempre precisei",
+                afirmacao: "voltar pro caps é mais doq real"
             }
         ]
     },
     {
-        enunciado: "Pergunta 5",
+        enunciado: "quem o Kawã gosta mais?",
         alternativas: [
             {
-                texto: "Texto 5.1",
-                afirmacao: "Afirmação 5.1"
+                texto: "Rayssa",
+                afirmacao: "nada tóxico eu diria"
             },
             {
-                texto: "Texto 5.2",
-                afirmacao: "Afirmação 5.2"
+                texto: "Leticia <3",
+                afirmacao: "pelos velhos tempos né"
             }
         ]
     },
